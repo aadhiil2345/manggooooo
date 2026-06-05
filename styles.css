@@ -521,9 +521,7 @@ textarea {
   }
 
   .gallery-shell,
-  .plant-card,
-  .upload-layout,
-  .timeline-item {
+  .plant-card {
     grid-template-columns: 1fr;
   }
 
@@ -537,29 +535,42 @@ textarea {
   }
 
   .gallery-shell {
-    grid-template-columns: 56px 56px;
+    grid-template-columns: 1fr;
     justify-content: center;
   }
 
   .photo-frame {
-    grid-column: 1 / -1;
+    grid-column: 1;
+  }
+
+  .photo-frame {
+    position: relative;
   }
 
   .gallery-btn {
-    justify-self: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
   }
 
   .gallery-btn.prev {
-    transform: none;
+    left: 10px;
   }
 
   .gallery-btn.next {
-    transform: none;
+    right: 10px;
   }
 
   .photo-frame img {
-    height: 72vw;
-    min-height: 310px;
+    height: auto;
+    min-height: 60vw;
+  }
+
+  .photo-frame figcaption {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
   }
 
   .fact-grid {
@@ -591,8 +602,5 @@ textarea {
     bottom: 10px;
   }
 
-  .upload-panel,
-  .timeline-panel {
-    padding: 18px;
-  }
+
 }
