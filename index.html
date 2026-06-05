@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mango Tree</title>
+    <link rel="preconnect" href="https://commons.wikimedia.org" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Mango exhibition home">
+        <span class="brand-mark"></span>
+        Mango tree
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#planting">Planting</a>
+        <a href="#details">Details</a>
+        <a href="#progress">Progress</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="orbit one"></div>
+        <div class="orbit two"></div>
+        <div class="hero-content">
+          <p class="eyebrow">ABOUT THE TREE</p>
+          <h1 id="hero-title">Mango</h1>
+          <p>
+            A community planting showcase following one young mango tree from
+            its first soil day to future harvest shade.
+          </p>
+       
+        </div>
+      </section>
+
+      <section id="planting" class="gallery-section" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <p class="eyebrow">Section 01</p>
+          <h2 id="gallery-title">Planting Day Photos</h2>
+        </div>
+
+        <div class="gallery-shell">
+          <button class="gallery-btn prev" type="button" aria-label="Previous photo">
+            &#10094;
+          </button>
+          <figure class="photo-frame">
+            <img id="galleryImage" src="" alt="" />
+            <figcaption>
+              <span id="photoCount"></span>
+              <strong id="galleryCaption"></strong>
+            </figcaption>
+          </figure>
+          <button class="gallery-btn next" type="button" aria-label="Next photo">
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <section id="details" class="details-section" aria-labelledby="details-title">
+        <div class="plant-card">
+          <div>
+            <p class="eyebrow">The Planted Tree</p>
+            <h2 id="details-title">About the Mango Plant</h2>
+            <p>
+              Mango is a tropical evergreen fruit tree known scientifically as
+              <em>Mangifera indica</em>. The planted mango belongs to the
+              Anacardiaceae family and is loved for its broad shade, glossy
+              leaves, fragrant flowers, and sweet fruit.
+            </p>
+            <p>
+              It grows best in warm, sunny climates with rich, well-drained soil.
+              A healthy mango tree can become a generous shade tree and later
+              produce golden, green, or blush-colored fruits with juicy flesh.
+            </p>
+          </div>
+
+          <ul class="fact-grid" aria-label="Mango plant details">
+            <li>
+              <span>Type</span>
+              Tropical evergreen fruit tree
+            </li>
+            <li>
+              <span>Family</span>
+              Anacardiaceae
+            </li>
+            <li>
+              <span>Climate</span>
+              Warm, sunny, frost-free
+            </li>
+            <li>
+              <span>Care</span>
+              Sunlight, water, mulch, patience
+            </li>
+          </ul>
+
+          <div class="mango-photos" aria-label="Mango photo collection">
+            <figure>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Mango%20Fruit%20on%20the%20Tree.jpg?width=900"
+                alt="Mango fruits hanging from a mango tree branch"
+              />
+              <figcaption>Mango fruit on tree</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Mango%20Tree%20Leaves.jpg?width=900"
+                alt="Healthy green mango tree leaves"
+              />
+              <figcaption>Healthy mango leaves</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Mango%20fruits%20on%20a%20tree%2002.jpg?width=900"
+                alt="Young mango fruits growing together on a tree"
+              />
+              <figcaption>Young mango cluster</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="progress" class="progress-section" aria-labelledby="progress-title">
+        <div class="section-heading">
+          <p class="eyebrow">Section 02</p>
+          <h2 id="progress-title">Upload Plant Progress</h2>
+          <p>
+            Visitors can add a fresh photo and note whenever the mango grows
+            new leaves, gains height, or needs care.
+          </p>
+        </div>
+
+        <div class="upload-layout">
+          <form class="upload-panel" id="progressForm">
+            <label class="drop-zone" for="plantPhoto">
+              <input id="plantPhoto" name="plantPhoto" type="file" accept="image/*" />
+              <span class="upload-icon">+</span>
+              <strong>Choose plant photo</strong>
+              <small>PNG, JPG, or WEBP</small>
+            </label>
+
+            <div class="form-row">
+              <label for="progressTitle">Progress title</label>
+              <input
+                id="progressTitle"
+                name="progressTitle"
+                type="text"
+                placeholder="New leaves appeared"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="progressNote">Observation note</label>
+              <textarea
+                id="progressNote"
+                name="progressNote"
+                rows="4"
+                placeholder="Write the height, leaf colour, watering update, or care activity..."
+                required
+              ></textarea>
+            </div>
+
+            <button class="submit-btn" type="submit">Add Progress</button>
+          </form>
+
+          <div class="timeline-panel" aria-live="polite">
+            <h3>Growth Timeline</h3>
+            <div id="timeline" class="timeline"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
